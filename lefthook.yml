@@ -1,0 +1,42 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+
+pre-commit:
+  parallel: true # run all commands concurrently
+  commands:
+    type-check:
+      glob: '*.{ts,tsx}'
+      run: npm run type-check
+    eslint:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: npm run lint {staged_files}
+    # spelling:
+    #   glob: '*.{js,ts,jsx,tsx,md}'
+    #   run: npm run cspell {staged_files}
+    prettier:
+      glob: '*.{js,ts,jsx,tsx,json}'
+      run: npm run prettier:autoformat {staged_files}
+    markdown-link-check:
+      glob: '*.md'
+      run: npm run markdown:check {staged_files}
+
+
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit
+    # spell-check:
+    #   run: npm run cspell --no-summary {1}
+
+
+pre-push:
+  parallel: true
+  commands:
+    test:
+      run: npm run test:pre-push
+    expo-doctor:
+      run: npm run doctor
+

@@ -1,0 +1,28 @@
+# EditorConfig is awesome: https://editorconfig.org
+
+root = true
+
+[*]
+# Non-configurable Prettier behaviors
+
+charset = utf-8
+# Caveat: Prettier won’t trim trailing whitespace inside template strings, but your editor might.
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Configurable Prettier behaviors
+
+indent_style = space
+indent_size = 2
+end_of_line = lf
+
+[*.js]
+quote_type = single
+semi = true
+
+[*.jsx]
+quote_type = single
+semi = true
+
+[*.json]
+quote_type = double

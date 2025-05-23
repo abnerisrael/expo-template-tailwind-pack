@@ -24,6 +24,11 @@ npx create-expo-app -t expo-template-tailwind-pack
 npx create-expo-app my-app --template https://github.com/abnerisrael/expo-template-tailwind-pack
 ```
 
+```bash
+# and install the git hooks
+npx lefthook install
+```
+
 ## 🧰 Available Scripts
 | Command                       | Description                                     |
 | ----------------------------- | ----------------------------------------------- |

@@ -1,6 +1,15 @@
 {
   "name": "expo-template-tailwind-pack",
   "description": "A starter pack for Expo projects.",
+  "keywords": [
+    "expo",
+    "template",
+    "react-native",
+    "tailwind",
+    "nativewind",
+    "zustand",
+    "react-query"
+  ],
   "license": "MIT",
   "author": "Abner Israel",
   "main": "expo-router/entry",
@@ -96,5 +105,5 @@
     "react-native-svg-transformer": "^1.5.0",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "private": false
 }
